@@ -18,7 +18,7 @@ def predict_stress():
         # Check if a file was uploaded in the request
         if 'file' not in request.files:
             return jsonify({'error': 'No file part'})
-        save_path = os.path.join("tmp_dir", "temp.wave")
+        save_path = "temp.wave"
         request.files['file'].save(save_path)
 
         # Check if the saved file exists
